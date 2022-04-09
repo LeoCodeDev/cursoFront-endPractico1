@@ -107,7 +107,7 @@
       }
 
       .sing-up {
-        background-color: var(--white);
+          background-color: var(--white);
           border-radius: 8px;
           border: solid 1px var(--hospital-green);
           color: var(--hospital-green);
@@ -120,6 +120,12 @@
       @media(max-width: 640px){
           .logo {
               display: block;
+          }
+
+          .sing-up {
+              width: inherit;
+              margin-top: 220px;
+              margin-bottom: 12px;
           }
       }
   </style>
@@ -134,9 +140,10 @@
                 <label for="password" class="label">Password</label>
                 <input type="password" name="password" id="password" placeholder="*********" class="input email-address">
                 <input type="submit" value="Log in" name="login" id="primary-button" class="primary-button login-button">
-                <p class="forgot"><a>Forgot my password</a></p>
-                <button class="sing-up">Sing up</button>
+                <a class="forgot">Forgot my password</a>
             </form>
+
+            <button class="sing-up">Sing up</button>
         </div>
     </div>
 </body>
