@@ -116,16 +116,21 @@
           font-size: var(--md);
           font-weight: bold;
           height: 48px;
+          margin-bottom: 44px;
       }
       @media(max-width: 640px){
           .logo {
               display: block;
+              margin-top: 68px;
           }
 
-          .sing-up {
-              width: inherit;
-              margin-top: 220px;
-              margin-bottom: 12px;
+          .form-container {
+              height: 100%;
+          }
+          .form-container div {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
           }
       }
   </style>
@@ -134,16 +139,17 @@
     <div class="login">
         <div class="form-container">
             <img src="logos/logo_yard_sale.svg" alt="logo" class="logo">
-            <form action="/" class="form">
-                <label for="email-addres" class="label">Email address</label>
-                <input type="email" name="email-addres" id="email-address" placeholder="user@example.com" class="input email-address">
-                <label for="password" class="label">Password</label>
-                <input type="password" name="password" id="password" placeholder="*********" class="input email-address">
-                <input type="submit" value="Log in" name="login" id="primary-button" class="primary-button login-button">
-                <a class="forgot">Forgot my password</a>
-            </form>
-
-            <button class="sing-up">Sing up</button>
+            <div>
+                <form action="/" class="form">
+                    <label for="email-addres" class="label">Email address</label>
+                    <input type="email" name="email-addres" id="email-address" placeholder="user@example.com" class="input email-address">
+                    <label for="password" class="label">Password</label>
+                    <input type="password" name="password" id="password" placeholder="*********" class="input email-address">
+                    <input type="submit" value="Log in" name="login" id="primary-button" class="primary-button login-button">
+                    <a class="forgot">Forgot my password</a>
+                </form>
+                <button class="sing-up">Sing up</button>
+            </div>
         </div>
     </div>
 </body>
