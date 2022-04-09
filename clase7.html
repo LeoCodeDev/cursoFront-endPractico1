@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+
+      :root {
+          --white: #FFF;
+          --black: #000;
+          --very-ligh-pink: #C7C7C7;
+          --text-input-field: #F7F7F7;
+          --hospital-green: #ACD9B2;
+          --sm: 14px;
+          --md: 16px;
+          --lg: 18px;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .desktop-menu {
+            width: 100px;
+            height: auto;
+            border: 1px solid var(--very-ligh-pink);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 20px 0px;
+        }
+
+        .desktop-menu ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: end;
+        }.desktop-menu ul li:nth-child(-n+2)
+         {
+            color: var(--black);
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: var(--md);
+        }
+        .desktop-menu ul li:last-child {
+            color: var(--hospital-green);
+            padding: 24px 0px;
+            border-top: solid 1px var(--very-ligh-pink);
+            font-size: var(--sm);
+        }
+        .desktop-menu ul li a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop-menu">
+        <ul>
+            <li>
+                <a href="/">My orders</a>
+            </li>
+            <li>
+                <a href="clase5.html">My account</a>
+            </li>
+            <li>
+                <a href="clase3.html">Sing out</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
