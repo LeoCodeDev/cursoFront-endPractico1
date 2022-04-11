@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+      :root {
+          --white: #FFF;
+          --black: #000;
+          --very-ligh-pink: #C7C7C7;
+          --text-input-field: #F7F7F7;
+          --hospital-green: #ACD9B2;
+          --sm: 14px;
+          --md: 16px;
+          --lg: 18px;
+      }
+
+      body {
+          margin: 0;
+          font-family: 'Quicksand', sans-serif;
+      }
+      .logo{
+        width: 100px;
+      }
+      .logo-content {
+          padding: 0;
+          margin: 0;
+      }
+      .menu-mobile {
+          display: none;
+      }
+      .navbar{
+          display: grid;
+          grid-template-columns: auto 1fr auto;
+          align-items: center;
+          gap: 24px;
+          border-bottom: solid 1px var(--very-ligh-pink);
+          color: var(--very-ligh-pink);
+          padding: 0px 24px;
+      }
+      .menu-left ul, .menu-right ul {
+          display: flex;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          height: 60px;
+          align-items: center;
+      }
+      .menu-left ul li a, .menu-right ul li a {
+          text-decoration: none;
+          margin: 0;
+          padding: 0;
+          color: var(--very-ligh-pink);
+      }
+      .menu-left ul li, .menu-right ul li {
+          padding: 9px;
+      }
+      .menu-left ul li:hover {
+          border: solid 1px var(--hospital-green);
+          color: var(--hospital-green);
+          border-radius: 8px;
+          padding: 8px;
+      }
+      .menu-right ul li:first-child{
+          font-size: var(--sm);
+          font-weight: 300;
+      }
+      .shopping-cart {
+          position: relative;
+      }
+      .menu-right ul div {
+          background-color: var(--hospital-green);
+          border-radius: 50%;
+          color: var(--black);
+          font-weight: bold;
+          width: 16px;
+          height: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 3px;
+          right: 6px;
+          font-size: var(--sm);
+      }
+      @media (max-width: 650px){
+          .menu-mobile {
+              display: block;
+          }
+          .menu-left {
+              display: none;
+          }
+          .menu-right ul li:first-child{
+              display: none;
+          }
+          .navbar {
+              justify-content: space-between;
+          }
+      }
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="icons/icon_menu.svg" alt="menu" class="menu-mobile">
+        <figure class="logo-content">
+            <img src="logos/logo_yard_sale.svg" alt="logo" class="logo">
+        </figure>
+        <div class="menu-left">
+            <ul>
+                <li> <a href="/">All</a></li>
+                <li> <a href="/">Clothes</a></li>
+                <li> <a href="/">Electronics</a></li>
+                <li> <a href="/">Furnitures</a></li>
+                <li> <a href="/">Toys</a></li>
+                <li> <a href="/">Others</a></li>
+            </ul>
+        </div>
+        <div class="menu-right">
+            <ul>
+                <li>user@example.com</li>
+                <li class="shopping-cart">
+                    <img src="icons/icon_shopping_cart_notification.svg" alt="shopping cart">
+                    <div>2</div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
