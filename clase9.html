@@ -37,7 +37,7 @@
       .main-container {
           display: grid;
           grid-template-rows: auto 1fr auto;
-          width: 300px;
+          width: 400px;
       }
       .order-container {
           display: flex;
@@ -66,13 +66,18 @@
           color: var(--very-ligh-pink);
       }
       .item-info {
-          display: flex;
-          width: 100%;
+          display: grid;
+          grid-template-columns: auto 1fr auto;
           align-items: center;
-          justify-content: space-between;
+          gap: 16px;
           font-weight: 300px;
           margin-bottom: 24px;
           color: var(--very-ligh-pink);
+          padding-right: 24px;
+      }
+      .item-info:hover{
+          background-color: var(--text-input-field);
+          cursor: pointer;
       }
       .item-info figure {
           margin: 0;
@@ -87,7 +92,6 @@
       }
       .item-info p:last-child{
           color: var(--black);
-          margin-left: 48px;
           font-weight: bold;
       }
     </style>
