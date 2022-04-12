@@ -25,29 +25,36 @@
           font-family: 'Quicksand', sans-serif;
       }
       .my-order{
-          width: 100%;
-          height: 100vh;
+          width: 450px;
+          /* height: 100%; */
           display: grid;
+          grid-template-columns: 1fr;
           place-items: center;
+          position: absolute;
+          right: 0;
+          margin: 24px;
+          justify-content: center;
       }
       .main-container-upper-bar {
           display: grid;
           grid-template-columns: auto 1fr;
           place-items: center;
-          margin-bottom: 40px;
+          margin-bottom: 24px;
       }
       .title {
           font-size: var(--lg);
+          font-weight: 700;
           margin: auto;
       }
       .main-container {
           display: grid;
           grid-template-rows: auto 1fr auto;
-          width: 400px;
+          width: 100%;
       }
       .order-container {
-          display: flex;
-          flex-direction: column;
+          display: grid;
+          grid-template-columns: 1fr;
+          align-items: center;
       }
       .order {
           display: flex;
@@ -72,10 +79,9 @@
           grid-template-columns: auto 1fr auto auto;
           align-items: center;
           gap: 16px;
-          font-weight: 300px;
+          font-weight: 300;
           margin-bottom: 24px;
           color: var(--very-ligh-pink);
-          padding-right: 24px;
       }
       .item-info:hover{
           background-color: var(--text-input-field);
@@ -107,16 +113,26 @@
           width: 100%;
           cursor: pointer;
       }
+      @media (max-width: 450px){
+          .my-order{
+              width: 100%;
+              position: initial;
+              margin: 24px 16px;
+          }
+          .item-info{
+              grid-template-columns: repeat(4,auto);
+          }
+      }
     </style>
 </head>
 <body>
     <div class="my-order">
         <div class="main-container">
-            <div class="main-container-upper-bar">
-                <img src="icons/icon_menu.svg" alt="menu icon" class="menu-icon">
-                <h1 class="title">Shopping cart</h1>
-            </div>
             <div class="order-container">
+                <div class="main-container-upper-bar">
+                    <img src="icons/icon_menu.svg" alt="menu icon" class="menu-icon">
+                    <h1 class="title">Shopping cart</h1>
+                </div>
                 <div class="item-info">
                     <figure>
                         <img src="assets/camara1.jpg" alt="camara">
