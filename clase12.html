@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+          --white: #FFF;
+          --black: #000;
+          --very-ligh-pink: #C7C7C7;
+          --text-input-field: #F7F7F7;
+          --hospital-green: #ACD9B2;
+          --sm: 14px;
+          --md: 16px;
+          --lg: 18px;
+        }
+
+        body {
+          margin: 0;
+          font-family: 'Quicksand', sans-serif;
+        }
+        figure{
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            margin: 0;
+        }
+        .main-container {
+            position: absolute;
+            width: 360px;
+            right: 0;
+        }
+        .picture-container {
+            width: 100%;
+            height: 360px;
+        }
+        .picture-container-image {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            border-radius: 0 0 24px 24px ;
+            overflow: hidden;
+            object-fit: cover;
+        }
+        .picture-container-circule {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background-color: var(--white);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .product-info {
+            color: var(--very-ligh-pink);
+            font-weight: 300;
+            font-size: var(--md);
+            margin: 24px;
+        }
+        .product-info :first-child {
+            color: var(--black);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .product-info-description {
+            color: var(--black);
+            font-weight: 300;
+            font-size: var(--sm);
+            margin: 8px 0px 32px;
+        }
+        .product-info-button {
+            background-color: var(--hospital-green);
+            width: 100%;
+            border-radius: 8px;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: var(--lg);
+            font-weight: 700;
+        }
+        @media (max-width: 630px ){
+            .main-container{
+                width: 100%;
+                height: 100vh;
+            }
+            .picture-container{
+                height: auto
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="main-container">
+        <figure class="picture-container">
+            <img src="./assets/caramara2.jpg" alt="product image" class="picture-container-image">
+            <div class="picture-container-circule">
+                <img src="./icons/icon_close.png" alt="close icon" class="picture-container-close">
+            </div>
+        </figure>
+        <div class="product-info">
+            <p class="product-info-price">$35.00</p>
+            <p class="product-info-name">Product Name</p>
+            <p class="product-info-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi provident eveniet amet.</p>
+            <button class="product-info-button"><img src="./icons/bt_add_to_cart.svg" alt="Add to cart">Add to cart</button>
+        </div>
+    </aside>
+</body>
+</html>
